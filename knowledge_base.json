@@ -1,0 +1,186 @@
+[
+  {
+    "id": "KB-001",
+    "title": "High RAM (memory) usage",
+    "keywords": ["ram", "memory", "high ram usage", "high memory", "out of memory", "95% ram", "slow", "lag", "lagging", "task manager", "memory leak", "not enough memory"],
+    "causes": "Too many open programs or browser tabs, a program with a memory leak, too many startup programs, malware, or simply too little installed RAM for the workload.",
+    "steps": [
+      "Open Task Manager (Ctrl+Shift+Esc), go to the Processes tab and click the Memory column to sort by usage. Note which programs use the most.",
+      "Save your work and close programs or browser tabs you do not need.",
+      "If one program keeps growing in memory over time, restart that program (this is a typical sign of a memory leak) and check for an update for it.",
+      "Restart the computer to clear memory held by long-running processes.",
+      "Open Task Manager > Startup apps and disable unneeded programs that start with Windows.",
+      "Run a scan with Windows Security (Virus & threat protection).",
+      "If RAM stays above about 85-90% even with few programs open, the PC probably needs more RAM; ask IT support about an upgrade."
+    ],
+    "warnings": ["Do not end processes you do not recognise; ending a Windows system process can make the system unstable.", "Save your work before closing programs."]
+  },
+  {
+    "id": "KB-002",
+    "title": "Slow Windows startup / slow boot",
+    "keywords": ["slow startup", "slow boot", "boot takes long", "takes forever to start", "startup programs", "slow to start", "long boot time", "login slow", "slow after login", "startup"],
+    "causes": "Too many programs launching at startup, an old hard disk drive (HDD), a nearly full disk, pending updates, or background scans right after boot.",
+    "steps": [
+      "Open Task Manager > Startup apps and look at the 'Startup impact' column. Disable high-impact programs you do not need at startup.",
+      "Check free disk space (Settings > System > Storage). A nearly full system drive slows Windows down.",
+      "Install pending Windows updates (Settings > Windows Update) and restart.",
+      "Wait a few minutes after logging in; Windows Update and antivirus scans can temporarily use a lot of resources.",
+      "Run a Windows Security scan to rule out malware.",
+      "If the PC still uses a traditional hard disk drive, an SSD upgrade is the most effective hardware fix; ask IT support."
+    ],
+    "warnings": ["Disabling a startup entry does not uninstall the program, but do not disable security software or drivers you do not recognise."]
+  },
+  {
+    "id": "KB-003",
+    "title": "Low disk space",
+    "keywords": ["disk space", "low disk space", "disk full", "drive full", "storage full", "no space left", "c drive full", "storage", "not enough space", "out of space"],
+    "causes": "Large downloads, video or photo files, temporary files, old Windows update files, or many installed programs.",
+    "steps": [
+      "Open Settings > System > Storage to see what uses the most space.",
+      "Turn on Storage Sense, or use 'Temporary files' in the Storage page to remove temporary files and empty the Recycle Bin.",
+      "Review the Downloads folder and delete files you no longer need.",
+      "Uninstall programs you no longer use (Settings > Apps > Installed apps).",
+      "Move large personal files (videos, photos) to an external drive or cloud storage.",
+      "Aim to keep at least 10-15% of the drive free."
+    ],
+    "warnings": ["Never delete files from the Windows or System32 folders to free space.", "Do not use 'registry cleaner' tools.", "Back up important files before deleting anything you are unsure about."]
+  },
+  {
+    "id": "KB-004",
+    "title": "Wi-Fi connection problems",
+    "keywords": ["wifi", "wi-fi", "wireless", "cannot connect to wifi", "wifi keeps disconnecting", "wifi not showing", "no wifi networks", "weak signal", "wifi drops", "network adapter", "wifi disconnecting"],
+    "causes": "Wi-Fi turned off or airplane mode on, router problems, weak signal, wrong saved password, or an outdated or faulty wireless driver.",
+    "steps": [
+      "Check that Airplane mode is off and Wi-Fi is switched on (Settings > Network & internet).",
+      "Check whether other devices can connect to the same network. If none can, the router or ISP is the likely cause.",
+      "Restart the router: unplug it for 30 seconds, plug it back in and wait a few minutes.",
+      "Click the Wi-Fi network > 'Forget', then reconnect and re-enter the password.",
+      "Move closer to the router to test whether signal strength is the problem.",
+      "Run the troubleshooter: Settings > System > Troubleshoot > Other troubleshooters > Network and Internet.",
+      "Install pending Windows updates, which may include a newer wireless driver."
+    ],
+    "warnings": ["'Network reset' removes all saved Wi-Fi networks and VPN settings; use it only as a last resort and make sure you know your Wi-Fi password.", "Do not change router admin settings if you are not sure what they do."]
+  },
+  {
+    "id": "KB-005",
+    "title": "DNS resolution failures (websites not found)",
+    "keywords": ["dns", "dns error", "dns server not responding", "dns_probe_finished_nxdomain", "server not found", "website not found", "name not resolved", "cannot resolve", "err_name_not_resolved", "websites not loading but internet works"],
+    "causes": "The DNS server from the ISP or router is not responding, a corrupted DNS cache, a VPN or proxy interfering, or incorrect DNS settings on the computer.",
+    "steps": [
+      "Test whether the problem affects all websites and all browsers, and whether another device on the same network has the same problem.",
+      "Restart the router and the computer.",
+      "Turn off any VPN or proxy and test again.",
+      "In Command Prompt you can run 'ipconfig /flushdns' yourself; it only clears the local DNS cache and is safe.",
+      "Try automatic DNS first (Settings > Network & internet > your connection > DNS server assignment). If that does not help, a public DNS such as 1.1.1.1 or 8.8.8.8 can be tested."
+    ],
+    "warnings": ["Write down your current DNS settings before changing them so you can restore them.", "On a company or university network, do not change DNS settings without permission from IT support."]
+  },
+  {
+    "id": "KB-006",
+    "title": "No internet connection",
+    "keywords": ["no internet", "internet not working", "connected but no internet", "no internet access", "limited connectivity", "offline", "cannot access internet", "ethernet", "lan cable", "router", "modem"],
+    "causes": "ISP outage, a router or modem fault, a loose cable, a disabled network adapter, or misconfigured VPN or proxy settings.",
+    "steps": [
+      "Check whether other devices (phone, other PC) have internet. If none do, the problem is the router, modem or ISP, not your computer.",
+      "Check cables and router lights. Make sure the Ethernet cable is firmly connected, or Wi-Fi is on.",
+      "Restart modem and router: unplug for 30 seconds, plug back in, wait about 3 minutes.",
+      "Restart the computer.",
+      "Turn off any VPN or proxy and test again.",
+      "Run the troubleshooter: Settings > System > Troubleshoot > Other troubleshooters > Network and Internet.",
+      "If everything else works but only certain websites fail, see the DNS entry. If the router shows no connection, contact the ISP."
+    ],
+    "warnings": ["Do not reset the router to factory settings unless you have the ISP login details; you may lose the connection configuration."]
+  },
+  {
+    "id": "KB-007",
+    "title": "Printer not responding or not printing",
+    "keywords": ["printer", "printer not responding", "printer offline", "not printing", "print queue", "print job stuck", "printer error", "cannot print", "spooler", "printing"],
+    "causes": "Printer powered off or offline, cable or network connection problem, stuck jobs in the print queue, wrong default printer, or an outdated or missing driver.",
+    "steps": [
+      "Check that the printer is on, has paper and ink or toner, and shows no error light or message. Clear any paper jam following the printer manual.",
+      "Check the connection: USB cable firmly plugged in, or printer on the same network for Wi-Fi printers.",
+      "Open Settings > Bluetooth & devices > Printers & scanners, select the printer and open the print queue. Cancel stuck jobs.",
+      "Make sure the correct printer is selected as default and is not set to 'Use printer offline'.",
+      "Restart the printer and the computer.",
+      "If it still fails, remove the printer and add it again, or install the latest driver from the printer manufacturer's official website."
+    ],
+    "warnings": ["Switch the printer off and unplug it before opening it to clear a paper jam.", "Download drivers only from the manufacturer's official website."]
+  },
+  {
+    "id": "KB-008",
+    "title": "Windows application crashes or freezes",
+    "keywords": ["app crashes", "application crash", "program crashes", "program not responding", "app not responding", "keeps closing", "crashes on startup", "application freezes", "program freezes", "stopped working", "crash"],
+    "causes": "A bug in the application, an outdated version, corrupted program files, missing Windows updates, low RAM or disk space, or a conflict with other software.",
+    "steps": [
+      "Restart the application and the computer.",
+      "Check whether the application has an update and install it.",
+      "Install pending Windows updates.",
+      "Check free RAM and disk space; crashes are more common when either is almost full.",
+      "For apps installed from Microsoft Store or listed in Settings > Apps > Installed apps, open Advanced options and try 'Repair' first.",
+      "Open Reliability Monitor (search 'View reliability history') to see when and how often the application failed, and note any error text.",
+      "If the problem remains, uninstall and reinstall the application from its official source."
+    ],
+    "warnings": ["'Reset' in the app's Advanced options can delete the app's local data; back up first and try 'Repair' before 'Reset'.", "Only download installers from the official vendor website."]
+  },
+  {
+    "id": "KB-009",
+    "title": "High CPU usage",
+    "keywords": ["cpu", "high cpu", "100% cpu", "cpu usage", "processor", "fan loud", "fan noise", "hot laptop", "overheating", "slow", "system process", "antimalware service executable", "100% usage"],
+    "causes": "A busy or misbehaving program, background tasks such as Windows Update, indexing or antivirus scans, too many browser tabs or extensions, malware, or an overheating CPU that is throttling.",
+    "steps": [
+      "Open Task Manager (Ctrl+Shift+Esc), Processes tab, and click the CPU column to see which program uses the most.",
+      "If it is a normal program, save your work, close it and reopen it.",
+      "If it is Windows Update, search indexing or Windows Security, wait 10-20 minutes; these tasks are often temporary.",
+      "Close unneeded browser tabs and disable browser extensions you do not use.",
+      "Restart the computer, then check Task Manager again.",
+      "Run a Windows Security scan to rule out malware.",
+      "If the fan is very loud or the laptop is very hot, make sure the vents are not blocked and the laptop stands on a hard surface."
+    ],
+    "warnings": ["Do not end processes you do not recognise; some are essential Windows processes.", "Do not install 'CPU booster' or 'PC cleaner' programs."]
+  },
+  {
+    "id": "KB-010",
+    "title": "Windows Update problems",
+    "keywords": ["windows update", "update failed", "update stuck", "update error", "cannot install updates", "updates not installing", "stuck on updating", "update error code", "pending update", "update"],
+    "causes": "Not enough free disk space, an interrupted download, corrupted update files, a pending restart, an unstable internet connection, or software conflicts.",
+    "steps": [
+      "Make sure the PC has a stable internet connection and plenty of free disk space (at least 10-20 GB for major updates).",
+      "Restart the computer, then open Settings > Windows Update and click 'Check for updates' again.",
+      "Run the troubleshooter: Settings > System > Troubleshoot > Other troubleshooters > Windows Update.",
+      "Disconnect non-essential USB devices and external drives, then retry.",
+      "Check that the date, time and time zone are correct.",
+      "Note the exact error code; it can be searched on Microsoft's support website or given to IT support."
+    ],
+    "warnings": ["Do not turn off the computer while an update says 'Working on updates'; it can take a long time.", "Download updates only through Windows Update or Microsoft's official website.", "Back up important files before a major Windows update."]
+  },
+  {
+    "id": "KB-011",
+    "title": "Slow internet speed",
+    "keywords": ["slow internet", "slow wifi", "slow download", "slow browsing", "buffering", "high ping", "lag online", "speed test", "internet slow", "slow connection"],
+    "causes": "Weak Wi-Fi signal, network congestion, large background downloads or cloud sync, a VPN, router problems, or a problem on the ISP side.",
+    "steps": [
+      "Run a speed test (for example in your browser) and compare it with the speed in your ISP plan. If possible, test with an Ethernet cable as well.",
+      "Check whether other devices are also slow.",
+      "Move closer to the router, or use the 5 GHz Wi-Fi band if your router offers it.",
+      "Pause large downloads, game updates and cloud sync (OneDrive, Google Drive) and close streaming apps.",
+      "Turn off VPN temporarily and test again.",
+      "Restart the router. If the speed is still much below your plan, contact the ISP."
+    ],
+    "warnings": ["Do not install 'internet booster' programs; they do not work and may be malware."]
+  },
+  {
+    "id": "KB-012",
+    "title": "Blue screen (BSOD) or unexpected restarts",
+    "keywords": ["blue screen", "bsod", "stop code", "crashed and restarted", "unexpected restart", "keeps restarting", "critical process died", "irql_not_less_or_equal", "pc restarts randomly", "restart loop"],
+    "causes": "A faulty or incompatible driver, recently installed software or updates, failing RAM or disk, overheating, or corrupted system files.",
+    "steps": [
+      "Write down or photograph the stop code shown on the blue screen (for example 'CRITICAL_PROCESS_DIED').",
+      "Think about what changed recently (new driver, update, software, hardware) and note it.",
+      "Install pending Windows updates, which often contain driver fixes.",
+      "Free up disk space and check that the PC is not overheating.",
+      "To test RAM, search for 'Windows Memory Diagnostic' and run it (it restarts the computer).",
+      "If the PC cannot start normally, it may be possible to use Safe Mode, but this is a good point to contact IT support."
+    ],
+    "warnings": ["If blue screens are frequent, back up your important files as soon as possible.", "Avoid 'driver updater' and 'registry cleaner' tools; they often cause more problems.", "Do not try to reinstall Windows without a backup of your data."]
+  }
+]
